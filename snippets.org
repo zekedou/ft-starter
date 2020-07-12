@@ -1,0 +1,24 @@
+* reliable way to unlock videos
+  Click events is the reliable event to unlock videos.
+
+  #+begin_src js2
+    const onClick = () => {
+      dom.removeEventListener('click', onClick)
+      // unlock videos
+    }
+
+    dom.addEventListener('click', onClick)
+
+  #+end_src
+
+* create DOM masks for buttons
+  There's a displayObject called `button`. Create a DOM mask for it:
+  #+begin_src js2
+    const { x, y, width, height } = button.getBounds()
+    const buttonMask = new DOM('button')
+          .setAlpha(0)
+          .setPosition(x, y)
+          .setSize(width, height)
+
+    this.addChild(buttonMask)
+  #+end_src

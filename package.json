@@ -1,0 +1,62 @@
+{
+  "name": "starter-ft",
+  "description": "Scaffold out a page supported by ft.",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "APP_ENV=local webpack-dev-server --mode development --hot",
+    "build:preview": "APP_ENV=preview W_PUBLIC_PATH='' webpack --mode production",
+    "preview": "npm run build:preview && echo 'placeholder'",
+    "build:release": "APP_ENV=release W_PUBLIC_PATH='' webpack --mode production",
+    "release": "npm run build:release && echo 'placeholder'",
+    "lint": "eslint 'src/**/*.js'"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.6.0",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.2.1",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2",
+    "regenerator-runtime": "^0.13.3",
+    "scriptjs": "^2.5.9",
+    "webpack-config-parts": "^7.1.0"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --quiet",
+      "commit-msg": "commitlint --color false --env HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.js": [
+      "eslint --fix --no-color",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
