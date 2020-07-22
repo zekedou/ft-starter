@@ -23,7 +23,7 @@ class ExampleGradientTexture extends Scene {
     })
 
     const circle = new Graphics()
-      .beginTextureFill(grd)
+      .beginTextureFill({ texture: grd })
       .drawRect(0, 0, width, height)
       .setOrigin(0.5)
       .setPosition(...app.size.center)
