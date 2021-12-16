@@ -1,5 +1,5 @@
-# Starter FT
+# A starter for ft
 
-> Scaffold out a page supported by ft.
+> Scaffold out a page supported by [ft](https://github.com/c4710n/ft).
 
-Currently, this starter is using `master` branch of ft. If you wanna try this starter, you need to link ft manually.
+Currently, this starter is using `master` branch of ft. If you wanna try this starter, you need to link `ft` manually.
