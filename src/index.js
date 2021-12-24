@@ -9,7 +9,6 @@ import ExampleLifecycle from './scenes/ExampleLifecycle'
 import ExampleTime from './scenes/ExampleTime'
 import ExampleDOM from './scenes/ExampleDOM'
 import ExampleSpritesheet from './scenes/ExampleSpritesheet'
-import ExampleSpine from './scenes/ExampleSpine'
 import ExampleCapture from './scenes/ExampleCapture'
 import ExampleScroll from './scenes/ExampleScroll'
 import ExampleHTML5Video from './scenes/ExampleHTML5Video'
@@ -41,7 +40,6 @@ app.sm.register('lifecycle', ExampleLifecycle)
 app.sm.register('time', ExampleTime)
 app.sm.register('dom', ExampleDOM)
 app.sm.register('spritesheet', ExampleSpritesheet)
-app.sm.register('spine', ExampleSpine)
 app.sm.register('capture', ExampleCapture)
 app.sm.register('scroll', ExampleScroll)
 app.sm.register('html5-video', ExampleHTML5Video)

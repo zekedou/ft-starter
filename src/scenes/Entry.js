@@ -32,7 +32,7 @@ class Entry extends Scene {
     this.addChild(title)
 
     const description = new Text(
-      'visit a scene via:\nPROTOCOL://HOST:PORT/?scene=SCENE_NAME ',
+      'visit a scene via:\nPROTOCOL://HOST:PORT/?__scene__=SCENE_NAME',
       { fontSize: 28, fill: '#e8e8e8', align: 'center' }
     )
       .setOrigin(0.5)

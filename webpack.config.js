@@ -15,7 +15,7 @@ const {
   forceCaseSensitivePath,
   generateSourcemap,
   cleanupBuild,
-} = require('webpack-config-parts')
+} = require('./webpack.config.parts')
 
 function resolve(p) {
   const ROOT = path.resolve(__dirname)
@@ -36,7 +36,8 @@ const PATH_ENTRY = resolve('src/index.html')
 const PATH_SRC = resolve('src/')
 const PATH_SRC_INDEX = resolve('src/index.js')
 const PATH_DIST = resolve('dist/')
-const PATH_FT = resolve('node_modules/@yiiz/ft/src/')
+const PATH_FT = resolve('node_modules/ft/src/')
+console.log(PATH_FT)
 
 const commonConfig = [
   { resolve: { alias: { ft: PATH_FT } } },
