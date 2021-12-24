@@ -1,4 +1,4 @@
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 const setupIO = require('./setup-io')
 const setupDevServer = require('./setup-dev-server')
 const loadHTML = require('./load-html')

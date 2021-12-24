@@ -4,7 +4,7 @@ const { isProductionMode } = require('./helper')
 const generateSourcemap = () => ({
   devtool: isProductionMode()
     ? 'nosources-source-map'
-    : 'cheap-module-eval-source-map',
+    : 'eval-cheap-module-source-map',
 })
 
 module.exports = generateSourcemap
