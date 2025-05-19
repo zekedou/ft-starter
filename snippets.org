@@ -1,39 +1,41 @@
 * reliable way to unlock videos
-  Click events is the reliable event to unlock videos.
+Click events is the reliable event to unlock videos.
 
-  #+begin_src js
-    const onClick = () => {
-      dom.removeEventListener('click', onClick)
-      // unlock videos
-    }
+#+begin_src js
+const onClick = () => {
+  dom.removeEventListener('click', onClick)
+  // unlock videos
+}
 
-    dom.addEventListener('click', onClick)
+dom.addEventListener('click', onClick)
 
-  #+end_src
+#+end_src
 
 * create DOM masks for buttons
-  There's a displayObject called `button`. Create a DOM mask for it:
-  #+begin_src js
-    const { x, y, width, height } = button.getBounds()
-    const buttonMask = new DOM('button')
-          .setAlpha(0)
-          .setPosition(x, y)
-          .setSize(width, height)
+There's a displayObject called `button`. Create a DOM mask for it:
+#+begin_src js
+const { x, y, width, height } = button.getBounds()
+const buttonMask = new DOM('button')
+      .setAlpha(0)
+      .setPosition(x, y)
+      .setSize(width, height)
 
-    this.addChild(buttonMask)
-  #+end_src
+this.addChild(buttonMask)
+#+end_src
 
 * create filter for sprites
-  #+begin_src js
-    // filter for brightness
-    const colorMatrix = new PIXI.filters.ColorMatrixFilter()
-    colorMatrix.brightness(0.9)
-    sprite.setFilters(colorMatrix)
-  #+end_src
+#+begin_src js
+// filter for brightness
+const colorMatrix = new PIXI.filters.ColorMatrixFilter()
+colorMatrix.brightness(0.9)
+sprite.setFilters(colorMatrix)
+#+end_src
 
-  #+begin_src js
-  // filter for trimming colors
-  const colorMatrix = new PIXI.filters.ColorMatrixFilter()
-  colorMatrix.blackAndWhite(true)
-  sprite.setFilters(colorMatrix)
-  #+end_src
+#+begin_src js
+// filter for trimming colors
+const colorMatrix = new PIXI.filters.ColorMatrixFilter()
+colorMatrix.blackAndWhite(true)
+sprite.setFilters(colorMatrix)
+#+end_src
+
+* 9-slice scaling with ~PIXI.NineSlicePlane~
